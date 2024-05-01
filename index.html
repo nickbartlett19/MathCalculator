@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Calculator | Nick Bartlett</title>
-
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
-    
+<body class="flex flex-center">
+    <div class="simple-mode flex-col flex-center">
+        <button name = "toggle" class="toggle-btn">Toggle Mode</button>
+        <div class="calculator">
+            <div class="screen"></div>
+            <div class="button-grid"></div>
+        </div>
+    </div>
+    <div class="math-mode"></div>
 </body>
 </html>
