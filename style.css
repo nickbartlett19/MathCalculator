@@ -12,9 +12,14 @@ body {
     /* background-color: #9fa0a1; */
     background: radial-gradient(#69fcff, #9fa0a1);
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.calculator, .toggle-btn {
+.calculator, .calculator-side, .toggle-btn {
     background-color: #78797a;
     border: 1px solid black;
     border-radius: 10px;
@@ -25,12 +30,23 @@ body {
     height: 600px;
 }
 
+.calculator-side {
+    width: 250px;
+    height: 500px;
+}
+
 /* buttons */
 
 .toggle-btn {
     height: 30px;
+    margin-top: 5px;
     margin-bottom: 5px;
-    width: 50%;
+    width: 250px;
+}
+
+.math-mode {
+    display: flex;
+    flex-direction: row;
 }
 
 /* mobile layout */
@@ -39,6 +55,20 @@ body {
     .calculator {
         width: 300px;
         height: 433px;
+    }
+
+    .toggle-btn {
+        width: 150px;
+    }
+
+    .calculator-side {
+        width: 300px;
+        height: 300px;
+    }
+
+    .math-mode {
+        display: flex;
+        flex-direction: column;
     }
   }
 
@@ -56,4 +86,9 @@ body {
 .flex-col {
     display: flex;
     flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
