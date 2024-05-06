@@ -34,9 +34,7 @@ body {
 
 .top {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-
     flex-grow: 2;
 }
 
@@ -53,22 +51,22 @@ body {
     align-items: center;
 }
 
-.screen {
+.screen, .screen-large {
     background-color: lightgray;
     margin-top: 25px;
-    width: 450px;
+    width: 80%;
     height: 100px;
     border-radius: 10px;
 
 }
 
 .screen-large {
-    background-color: lightgray;
-    margin-top: 25px;
-    width: 80%;
     height: 150px;
-    border-radius: 10px;
+}
 
+
+.button-grid {
+    max-width: fit-content;
 }
 
 /* buttons */
@@ -90,7 +88,7 @@ body {
 @media only screen and (max-width: 1000px) {
     .math-mode {
         width: 600px;
-        height: 1000px;
+        height: 90%;
     }
 
     .math-mode {
@@ -106,25 +104,26 @@ body {
 /* mobile layout */
 
 @media only screen and (max-width: 600px) {
-    .calculator {
-        width: 300px;
-        height: 433px;
+    .simple-mode {
+        width: 92%;
+        height: 500px;
     }
 
-    .toggle-btn {
-        width: 150px;
-    }
-
-    .calculator-side {
-        width: 300px;
-        height: 300px;
+    .math-mode {
+        width: 95%;
+        height: 90%;
     }
 
     .math-mode {
         display: flex;
         flex-direction: column;
     }
+
+    .toggle-btn {
+        width: 200px;
+    }
 }
+
 /* flex classes */
 
 .flex {
