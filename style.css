@@ -24,12 +24,26 @@ body {
     border-radius: 10px;
 }
 
+.simple-mode {
+    width: 500px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .math-mode {
     width: 1000px;
     height: 600px;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+}
+
+.math-mode {
+    display: flex;
+    flex-direction: row;
 }
 
 .top {
@@ -40,15 +54,6 @@ body {
 
 .bottom {
     flex-grow: 1;
-}
-
-.simple-mode {
-    width: 500px;
-    height: 600px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .screen, .screen-large {
@@ -67,6 +72,11 @@ body {
 
 .button-grid {
     max-width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* buttons */
@@ -78,9 +88,21 @@ body {
     width: 250px;
 }
 
-.math-mode {
+.simple-button {
+    background-color: #78797a;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    height: 60px;
+
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.simple-button > span {
+    /* max-width: fit-content; */
 }
 
 /* tablet layout */
