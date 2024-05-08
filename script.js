@@ -7,22 +7,7 @@ function toggleMode() {
         mathMode.classList.remove('hide');
         simpleMode.classList.add('hide');
     }
-
-    // if (buttonGrid.firstChild) {
-    //     renderButtons();
-    // }
 }
-
-let basicButtons = [
- '+', '-', 'x', '÷', '=', 'AC', '+/-', '%', '.',
- '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-];
-
-// renderButton(basicButtons);
-
-// for (let button of basicButtons) {
-//     console.log(button);
-// }
 
 function renderButton(buttonText, buttonType) {
     let button = document.createElement('div');
@@ -31,37 +16,52 @@ function renderButton(buttonText, buttonType) {
     button.appendChild(text);
     button.classList.add(buttonType.toString());
     return button;
-    // for (let elem of buttons) {
-    //     let buttonDiv = document.createElement('div');
-    //     let buttonText = document.createElement('span');
-    //     buttonText.innerText = elem;
-
-    //     buttonDiv.appendChild(text);
-    //     buttonDiv.classList.add('simple-button');
-    // }
-
-    // button.appendChild(text);
-    // button.classList.add('simple-button');
-    // return button;
 }
 
 function appendButtons(buttons, HTMLelem) {
-    console.log('appending buttons!')
     for (let elem of buttons) {
         let button = renderButton(elem, 'simple-button');
         HTMLelem.appendChild(button);
     }
 }
 
+let basicButtons = [
+ '+', '-', 'x', '÷', '=', 'AC', '+/-', '%', '.',
+ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+];
+
+// simple mode
+let numberButtonsArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let mathButtonsArr = ['+', '-', 'x', '÷', '='];
+let calcButtonsArr = ['AC', '+/-', '%', '.'];
+
+// math mode
+let trigButtonsArr = ['Sin', 'Cos', 'Tan'];
+let advMathButtonsArr = ['a^x', 'log', 'ln'];
+
 const toggleBtn = document.querySelector('.toggle-btn');
 const mathMode = document.querySelector('.math-mode');
 const simpleMode = document.querySelector('.simple-mode');
 
 const buttonGrid = document.querySelectorAll('.button-grid');
+const numbers = document.querySelector('.numbers');
+const mathButtons = document.querySelector('.math-buttons');
+const calcButtons = document.querySelector('.calc-buttons');
 
-appendButtons(basicButtons, buttonGrid[0]);
+
+
+
+// for (let elem of buttonGrid) {
+//     appendButtons(basicButtons, elem);
+// }
+
+appendButtons(mathButtonsArr, mathButtons);
+appendButtons(calcButtonsArr, calcButtons);
 appendButtons(basicButtons, buttonGrid[1]);
-appendButtons(basicButtons, buttonGrid[2]);
+
+
+
+
 
 
 toggleBtn.addEventListener('click', () => toggleMode());
