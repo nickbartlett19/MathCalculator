@@ -78,6 +78,10 @@ body {
     justify-content: center;
 }
 
+.math-buttons, .calc-buttons {
+    display: flex;
+    flex-direction: row;
+}
 /* buttons */
 
 .toggle-btn {
