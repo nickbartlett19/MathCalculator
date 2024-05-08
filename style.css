@@ -48,12 +48,11 @@ body {
 
 .top {
     display: flex;
-    justify-content: center;
-    flex-grow: 2;
+    align-items: center;
+    flex-direction: column;
 }
 
 .bottom {
-    flex-grow: 1;
 }
 
 .screen, .screen-large {
@@ -92,17 +91,17 @@ body {
     background-color: #78797a;
     border: 1px solid black;
     border-radius: 10px;
+
     margin: 5px;
     padding: 5px;
+
     height: 60px;
+    width: 60px;
+    font-size: 40px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.simple-button > span {
-    /* max-width: fit-content; */
 }
 
 /* tablet layout */
