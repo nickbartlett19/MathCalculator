@@ -25,16 +25,10 @@ function appendButtons(buttons, HTMLelem) {
     }
 }
 
-// let basicButtons = [
-//  '+', '-', 'x', '÷', '=', 'AC', '+/-', '%', '.',
-//  '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-// ];
-
 // simple mode
 let numberButtonsArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '='];
 let mathButtonsArr = ['+', '-', 'x', '÷'];
 let calcButtonsArr = ['AC', '+/-', '%', '.'];
-// let equalsButtonArr = ['='];
 
 // math mode
 let trigButtonsArr = ['Sin', 'Cos', 'Tan'];
@@ -48,7 +42,10 @@ const buttonGrid = document.querySelectorAll('.button-grid');
 const numberButtons = document.querySelectorAll('.number-buttons');
 const mathButtons = document.querySelectorAll('.math-buttons');
 const calcButtons = document.querySelectorAll('.calc-buttons');
-// const equalsButtons = document.querySelectorAll('.equals-button');
+
+const trigButtons = document.querySelectorAll('.trig-buttons');
+const advMathButtons = document.querySelectorAll('.adv-math-buttons');
+
 
 for (let elem of mathButtons) {
     appendButtons(mathButtonsArr, elem);
@@ -62,8 +59,12 @@ for (let elem of numberButtons) {
     appendButtons(numberButtonsArr, elem);
 }
 
-// for (let elem of equalsButtons) {
-//     appendButtons(equalsButtonArr, elem);
-// }
+for (let elem of trigButtons) {
+    appendButtons(trigButtonsArr, elem);
+}
+
+for (let elem of advMathButtons) {
+    appendButtons(advMathButtonsArr, elem);
+}
 
 toggleBtn.addEventListener('click', () => toggleMode());
