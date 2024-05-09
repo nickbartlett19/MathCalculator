@@ -72,16 +72,7 @@ body {
     margin-bottom: 15px;
 }
 
-.button-grid {
-    max-width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-}
-
-.math-buttons, .calc-buttons, .number-buttons, .equals-button {
+.math-buttons, .calc-buttons, .number-buttons, .equals-button, .trig-buttons, .adv-math-buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -115,8 +106,11 @@ body {
     justify-content: center;
 }
 
-/* tablet layout */
+.simple-button:hover {
+    background-color: #87888a;
+}
 
+/* tablet layout */
 @media only screen and (max-width: 1000px) {
     .simple-mode {
         width: 500px;
@@ -147,7 +141,6 @@ body {
 }
 
 /* mobile layout */
-
 @media only screen and (max-width: 600px) {
     .simple-mode {
         width: 92%;
