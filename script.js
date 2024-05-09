@@ -32,8 +32,9 @@ function appendButtons(buttons, HTMLelem) {
 
 // simple mode
 let numberButtonsArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-let mathButtonsArr = ['+', '-', 'x', '÷', '='];
+let mathButtonsArr = ['+', '-', 'x', '÷'];
 let calcButtonsArr = ['AC', '+/-', '%', '.'];
+let equalsButtonArr = ['='];
 
 // math mode
 let trigButtonsArr = ['Sin', 'Cos', 'Tan'];
@@ -47,11 +48,7 @@ const buttonGrid = document.querySelectorAll('.button-grid');
 const numberButtons = document.querySelectorAll('.number-buttons');
 const mathButtons = document.querySelectorAll('.math-buttons');
 const calcButtons = document.querySelectorAll('.calc-buttons');
-
-
-// for (let elem of buttonGrid) {
-//     appendButtons(basicButtons, elem);
-// }
+const equalsButtons = document.querySelectorAll('.equals-button');
 
 for (let elem of mathButtons) {
     appendButtons(mathButtonsArr, elem);
@@ -65,11 +62,8 @@ for (let elem of numberButtons) {
     appendButtons(numberButtonsArr, elem);
 }
 
-
-
-// appendButtons(mathButtonsArr, mathButtons);
-// appendButtons(calcButtonsArr, calcButtons);
-// appendButtons(basicButtons, buttonGrid[1]);
-
+for (let elem of equalsButtons) {
+    appendButtons(equalsButtonArr, elem);
+}
 
 toggleBtn.addEventListener('click', () => toggleMode());
