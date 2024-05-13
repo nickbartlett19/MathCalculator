@@ -68,6 +68,14 @@ body {
     border-radius: 10px;
 }
 
+.screen, .screen-large {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
 .basic-buttons {
     width: 350px;
     margin-bottom: 15px;
